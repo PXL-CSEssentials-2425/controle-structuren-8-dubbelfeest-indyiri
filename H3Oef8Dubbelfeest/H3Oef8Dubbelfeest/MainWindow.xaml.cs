@@ -34,20 +34,22 @@ namespace H3Oef8Dubbelfeest
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
+            //De gehele getallen staan met een '.00' omdat anders de berekening niet goed werkt: het systeem leest het als een integer, ook al staat voor de variabele 'double'
+            
             int amountOfPeople;
-            double differentBdayChance = 1;
+            double differentBdayChance = 1.00;
             string inputAmountOfPeople = amountOfPersonsTextBox.Text;
 
             bool isInputValid = int.TryParse(inputAmountOfPeople, out amountOfPeople);
 
             if (isInputValid && amountOfPeople > 0)
             {
-                for ( int amountOfBdays = 0; amountOfBdays <= amountOfPeople; amountOfBdays++)
+                for ( int amountOfBdays = 1; amountOfBdays <= amountOfPeople; amountOfBdays++)
                 {
-                    double bday = (365 - amountOfBdays) / 365;
+                    double bday = (365.00 - ( amountOfBdays - 1.00)) / 365.00; //De '-1.00' is omdat anders is de kans op een sameBday niet 0% als het aantal personen 1 is
 
                     differentBdayChance *= bday;
-                    double sameBdayChance = 1 - differentBdayChance;
+                    double sameBdayChance = 1.00 - differentBdayChance;
 
                     chanceTextBox.Text = $"De kans op gelijke verjaardagen is {sameBdayChance.ToString("#0.##%")}";
                 }
