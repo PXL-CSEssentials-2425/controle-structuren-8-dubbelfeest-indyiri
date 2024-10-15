@@ -1,0 +1,18 @@
+﻿<Window x:Class="H3Oef8Dubbelfeest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H3Oef8Dubbelfeest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="amountOfPersonsLabel" Content="Aantal personen" HorizontalAlignment="Left" Height="27" Margin="47,122,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="amountOfPersonsTextBox" HorizontalAlignment="Left" Height="28" Margin="47,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="chanceTextBox" HorizontalAlignment="Left" Height="32" Margin="47,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" IsEnabled="False"/>
+        <Button x:Name="calculateButton" Content="Bereken" HorizontalAlignment="Left" Height="46" Margin="502,109,0,0" VerticalAlignment="Top" Width="142" Click="calculateButton_Click"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Height="46" Margin="502,275,0,0" VerticalAlignment="Top" Width="142" Click="closeButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Height="46" Margin="502,189,0,0" VerticalAlignment="Top" Width="142" Click="clearButton_Click"/>
+
+    </Grid>
+</Window>
